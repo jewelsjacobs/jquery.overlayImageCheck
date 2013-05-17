@@ -1,0 +1,27 @@
+{
+  "name": "jquery.overlayImageCheck",
+  "title": "jQuery Overlay Image Check",
+  "description": "jQuery plugin to create radio / checkboxes with a nonchecked image and an overlaid checked image.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jjacobs/jquery.overlayImageCheck",
+  "author": {
+    "name": "Julia Jacobs",
+    "email": "jjacobs2000@me.com",
+    "url": "http://html5devgal.wordpress.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jjacobs/jquery.overlayImageCheck.git"
+  },
+  "bugs": "https://github.com/jjacobs/jquery.overlayImageCheck/issues",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/jjacobs/jquery.overlayImageCheck/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "*"
+  },
+  "keywords": []
+}
