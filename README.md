@@ -42,15 +42,6 @@ body {
     background-color: black;
 }
 
-#centeredInWidndow {
-    padding: 30px;
-    background-color: white;
-    height: 80px;
-    width: 270px;
-    vertical-align: middle;
-    text-align: center;
-}
-
 .rounded-corners {
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
