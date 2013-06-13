@@ -63,10 +63,10 @@
     };
 
     var setup = function (n, o) {
+        var c = n.is(':checked');
+
         // wasChecked option persists checked state
         o.wasChecked ? n.prop('checked', true) : n.prop('checked', false);
-
-        var c = n.is(':checked');
 
         // set id on input if it doesn't have one
         var id = n.attr('id');
@@ -120,6 +120,10 @@
 
         wrapper.append(checkedImg);
         wrapper.append(uncheckedImg);
+
+    	if (c) {
+	        wrapper.addClass('checked');
+		}
 
         if (c) {
             checkedImg.show();
