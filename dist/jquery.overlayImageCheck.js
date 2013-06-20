@@ -32,8 +32,7 @@
         // Unless the tab index is manually set, jQuery may not be able to
         // get it using the attr() method, so we'll check multiple places
         // and then make sure its at least a number
-        //noinspection UnnecessaryLocalVariableJS
-      var ti = n.attr('tabindex') || n.get(0).tabIndex || 0;
+        var ti = n.attr('tabindex') || n.get(0).tabIndex || 0;
 
         container.css({
                           cursor: 'pointer'
@@ -65,10 +64,10 @@
     };
 
     var setup = function (n, o) {
-        var c = n.is(':checked');
-
         // wasChecked option persists checked state
         o.wasChecked ? n.prop('checked', true) : n.prop('checked', false);
+
+        var c = n.is(':checked');
 
         // set id on input if it doesn't have one
         var id = n.attr('id');
