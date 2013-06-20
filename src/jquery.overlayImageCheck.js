@@ -31,7 +31,8 @@
         // Unless the tab index is manually set, jQuery may not be able to
         // get it using the attr() method, so we'll check multiple places
         // and then make sure its at least a number
-        var ti = n.attr('tabindex') || n.get(0).tabIndex || 0;
+        //noinspection UnnecessaryLocalVariableJS
+      var ti = n.attr('tabindex') || n.get(0).tabIndex || 0;
 
         container.css({
                           cursor: 'pointer'
@@ -121,9 +122,9 @@
         wrapper.append(checkedImg);
         wrapper.append(uncheckedImg);
 
-    	if (c) {
-	        wrapper.addClass('checked');
-		}
+      if (c) {
+          wrapper.addClass('checked');
+    }
 
         if (c) {
             checkedImg.show();

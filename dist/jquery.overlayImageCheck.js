@@ -1,4 +1,4 @@
-/*! jQuery Overlay Image Check - v0.1.0 - 2013-05-17
+/*! jQuery Overlay Image Check - v0.1.0 - 2013-06-20
 * https://github.com/jjacobs/jquery.overlayImageCheck
 *
 * jQuery plugin to create radio / checkboxes with a nonchecked image and an overlaid checked image.
@@ -32,7 +32,8 @@
         // Unless the tab index is manually set, jQuery may not be able to
         // get it using the attr() method, so we'll check multiple places
         // and then make sure its at least a number
-        var ti = n.attr('tabindex') || n.get(0).tabIndex || 0;
+        //noinspection UnnecessaryLocalVariableJS
+      var ti = n.attr('tabindex') || n.get(0).tabIndex || 0;
 
         container.css({
                           cursor: 'pointer'
@@ -64,10 +65,10 @@
     };
 
     var setup = function (n, o) {
+        var c = n.is(':checked');
+
         // wasChecked option persists checked state
         o.wasChecked ? n.prop('checked', true) : n.prop('checked', false);
-
-        var c = n.is(':checked');
 
         // set id on input if it doesn't have one
         var id = n.attr('id');
@@ -121,6 +122,10 @@
 
         wrapper.append(checkedImg);
         wrapper.append(uncheckedImg);
+
+      if (c) {
+          wrapper.addClass('checked');
+    }
 
         if (c) {
             checkedImg.show();
